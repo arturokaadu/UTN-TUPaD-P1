@@ -120,5 +120,16 @@ if mes in meses_validos:
             print("verano")
         elif (numero_mes == 9 and dia >= 23) or numero_mes in [10, 11] or (numero_mes == 12 and dia < 21):
             print("otoño")
+    elif hemisferio == "sur":
+    
+     if (mes == 12 and dia >= 21) or (mes in [1, 2]) or (mes == 3 and dia < 21):
+        estacion = "verano"
+    elif (mes == 3 and dia >= 21) or (mes in [4, 5]) or (mes == 6 and dia < 21):
+        estacion = "otoño"
+    elif (mes == 6 and dia >= 21) or (mes in [7, 8]) or (mes == 9 and dia < 23):
+        estacion = "invierno"
+    elif (mes == 9 and dia >= 23) or (mes in [10, 11]) or (mes == 12 and dia < 21):
+        estacion = "primavera"
 else:
-    print("Mes inválido")
+    estacion = "Hemisferio no reconocido"
+        
